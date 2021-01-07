@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="item-group" bindtap="onItemTapEvent">
+    <image class="thumbnail" src='{{thumbnail}}'></image>
+    <text class='item-title'>{{title}}</text>
+    <text class='item-rate'>{{rate}}分</text>
+  </view>
+
+  <view class='comment-title'>All movie reviews({{total}})</view>
+
+  <onecomment wx:for="{{comments}}" item="{{item}}"></onecomment>
+
+  <view class='page-btn-group'>
+    <button class='page-btn' bindtap='onPrePageTap' disabled='{{start <= 1}}' loading="{{preLoading}}">Previous Page</button>
+    <button class='page-btn' bindtap='onNextPageTap' loading='{{nextLoading}}'>Next Page</button>
+  </view>
+</view>
